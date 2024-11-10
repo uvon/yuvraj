@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvraj Bhatkar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="fade-in">
+        <div class="container">
+            <h1>Yuvraj Bhatkar</h1>
+            <div class="title">Mechanical Engineer | Problem Solver | Developer</div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="slide-in-left">
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <div class="container section-content">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <!-- Your Profile Image -->
+                <img src="image/profile.jpg" alt="Yuvraj Bhatkar" class="profile-img slide-in-left">
+                <p>Hello! I'm Yuvraj Bhatkar, a passionate Mechanical Engineer with a knack for solving real-world problems through technology. I specialize in software development, machine learning, and designing mechanical systems. My goal is to constantly learn and apply my knowledge to innovate and make an impact in the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in">
+        <div class="container section-content">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Electromagnetic Braking System</h3>
+                <p>Developed an innovative braking system using electromagnetic principles to reduce wear and tear, making the system more efficient and eco-friendly.</p>
+            </div>
+            <div class="project-item">
+                <h3>Spur Gear Mechanism</h3>
+                <p>Designed a spur gear mechanism with different materials to optimize efficiency and durability for various industrial applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section fade-in">
+        <div class="container section-content">
+            <h2>Experience</h2>
+
+            <div class="experience-item slide-in-left">
+                <h3>Lance Soft - Recruiter</h3>
+                <p>Jan 2024 - Jun 2024</p>
+                <ul>
+                    <li>Created job descriptions and sourced candidates using multiple platforms.</li>
+                    <li>Conducted interviews and collaborated with teams to meet staffing needs.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item slide-in-left">
+                <h3>Task Us - Support Specialist</h3>
+                <p>Jul 2023 - Present</p>
+                <ul>
+                    <li>Improved customer satisfaction and reduced ticket resolution time by 20%.</li>
+                    <li>Collaborated with cross-functional teams to address complex issues.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item slide-in-left">
+                <h3>Class Monitor - Education Advisor</h3>
+                <p>Jan 2023 - Jun 2023</p>
+                <ul>
+                    <li>Developed and implemented sales support strategies, leading to a 15% increase in customer satisfaction.</li>
+                    <li>Collaborated with teams to create and deliver effective sales presentations, driving a 25% increase in sales revenue.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item slide-in-left">
+                <h3>Teleperformance - Technical Support Executive</h3>
+                <p>Dec 2021 - Nov 2022</p>
+                <ul>
+                    <li>Developed and implemented training programs for new support representatives, reducing onboarding time by 30%.</li>
+                    <li>Conducted regular customer feedback surveys to improve service quality, resulting in a 15% increase in customer retention.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+        <div class="container section-content">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Customer Service</li>
+                <li>CRM Software Proficiency</li>
+                <li>Email Support</li>
+                <li>Blockchain Transactions</li>
+                <li>Problem Solving</li>
+                <li>Effective English Communication</li>
+                <li>Leadership</li>
+                <li>Convincing Skills</li>
+                <li>AutoCAD</li>
+                <li>Core Java</li>
+                <li>CAD Software (Creo, Catia, SolidWorks)</li>
+                <li>Python</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Digital Drawing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="container section-content">
+            <h2>Contact</h2>
+            <p>If you would like to get in touch with me for any opportunities, collaborations, or inquiries, feel free to reach out via the details below.</p>
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:yuvrajbhatkar3@gmail.com">yuvrajbhatkar3@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 74403 14056</p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yuvrajbhatkar3" target="_blank">linkedin.com/in/yuvrajbhatkar3</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Yuvraj Bhatkar | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript (Smooth Scrolling) -->
+    <script>
+        // Smooth Scroll Functionality
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Animations
+        const sections = document.querySelectorAll('.fade-in');
+        const slideIns = document.querySelectorAll('.slide-in-left');
+
+        function checkVisibility() {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    section.classList.add('animate');
+                }
+            });
+
+            slideIns.forEach(slideIn => {
+                const rect = slideIn.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    slideIn.classList.add('animate-slide-in');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // to trigger animations on page load
+    </script>
+</body>
+</html>
